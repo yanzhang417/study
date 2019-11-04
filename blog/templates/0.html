@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border: 1px;solid-color: red ;
+        }
+    </style>
+</head>
+<body>
+{% for row in content %}
+    {#    {{ row }}#}
+    <div>
+        <a href="/blog/{{ row[0] }}"><h2>{{ row[1] }}</h2></a>
+        <h3>{{ row[2] }}</h3>
+        <h4>{{ row[3] }}</h4>
+        <br></div>
+
+{% endfor %}
+</body>
+</html>

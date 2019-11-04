@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3013671655,3002155467&fm=26&gp=0.jpg);
+            background-size: 100% 100%;
+        }
+        form{
+            margin-top: 32%;
+            margin-left: 45%;
+        }
+    </style>
+</head>
+<body>
+<form action="/" method="POST">
+    {{ form.csrf_token }}
+{#    {{ form.hidden_tag() }}#}
+    {{ form.name.label }} {{ form.name(size = 20) }}<br>
+    {{ form.pwd.label }}    {{ form.pwd(size = 20) }}<br>
+    {{ form.pwd2.label }}    {{ form.pwd2(size = 20) }}<br>
+{#    <input type="submit" value="Go">#}
+    {{ form.submit }}
+{#    <input type="text" name="name">#}
+</form>
+</body>
+</html>
